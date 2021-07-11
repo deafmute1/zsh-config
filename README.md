@@ -6,6 +6,6 @@ To use this config:
 
 ``` sh 
 #!/usr/bin/env zsh 
-source ~/.config/zsh/zshrc 
+source PATH_TO_THIS_REPO/zshrc 
 ```
 
