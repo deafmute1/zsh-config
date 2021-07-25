@@ -10,10 +10,12 @@ MYDIR="$(dirname "$(readlink -f "$0")")"
 #source all configs
 # ls -v1 enables conf.d style numerical loading orders
 # e.g. 1_file.zsh loads after 0_file.zsh
-for file in $(ls -v1 "$MYDIR"/*.zsh); do 
-    source "$file"
+for file in $(ls -v1 "$MYDIR"/autosource/*.zsh); do 
+  source "$file"
 done
 
+if [[ -z "$SUPRESS_LOGIN" ]] ; then 
+  source "${MYDIR}/loginmsg.zsh" 
+fi
 
 [[ ! -f ~/.config/broot/launcher/bash/br ]] || source ~/.config/broot/launcher/bash/br
-
