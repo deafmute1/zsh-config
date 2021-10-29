@@ -14,8 +14,8 @@ for file in $(ls -v1 "$MYDIR"/autosource/*.zsh); do
   source "$file"
 done
 
-if [[ -z "$SUPRESS_LOGIN" ]] ; then 
-  source "${MYDIR}/loginmsg.zsh" 
-fi
+#if [[ -z "$SUPRESS_LOGIN" ]] ; then 
+#  source "${MYDIR}/loginmsg.zsh" 
+#fi
 
 [[ ! -f ~/.config/broot/launcher/bash/br ]] || source ~/.config/broot/launcher/bash/br
